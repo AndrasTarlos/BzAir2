@@ -6,7 +6,7 @@ public class Airplane {
 
     public Airplane(String name, int column, int row) {
         this.name = name;
-        passengers = new Passenger[row][column];
+        passengers = new Passenger[column][row];
     }
 
     public void addPassenger(int column, int row, String firstName, String lastName, int year, int month, int day) {
@@ -21,10 +21,10 @@ public class Airplane {
     }
 
     public int getLengthPassengersColumn() {
-        return passengers[0].length - 1;
+        return passengers.length;
     }
     public int getLengthPassengersRow() {
-        return passengers.length - 1;
+        return passengers[0].length;
     }
 
     public Passenger getPassenger(int column, int row) {
